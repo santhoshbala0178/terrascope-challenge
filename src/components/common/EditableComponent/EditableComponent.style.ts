@@ -9,6 +9,7 @@ export const TextContainer = styled.div`
   height: 100%;
   box-sizing: border-box;
   border: 2px solid transparent;
+  overflow-wrap: anywhere;
 
   &:hover {
     border: 2px solid ${(props) => props.theme.colors.grey};
