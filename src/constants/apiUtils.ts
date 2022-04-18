@@ -1,7 +1,9 @@
-export const GET_MEMOS = 'http://localhost:3001/memos';
+const LOCALHOST = 'http://localhost:3001';
 
-export const DELETE_MEMO = 'http://localhost:3001/memos/delete';
+export const GET_MEMOS = `${LOCALHOST}/memos`;
 
-export const ADD_MEMO = 'http://localhost:3001/memos/new';
+export const DELETE_MEMO = `${LOCALHOST}/memos/delete`;
 
-export const UPDATE_MEMO = 'http://localhost:3001/memo/update';
+export const ADD_MEMO = `${LOCALHOST}/memos/new`;
+
+export const UPDATE_MEMO = `${LOCALHOST}/memo/update`;

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Provider } from 'react-redux';
 import { ThemeProvider } from 'styled-components';
 import theme from './components/Theme';
 import AppContainer from './App.style';

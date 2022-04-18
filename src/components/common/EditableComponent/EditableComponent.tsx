@@ -29,8 +29,10 @@ const EditableComponent = ({ id, type, value, children }: any) => {
 
     const response = await axios.post(UPDATE_MEMO, params);
 
-    const { data } = await axios.get(GET_MEMOS);
-    if (setMemos) setMemos(data);
+    if (response.status === 200) {
+      const { data } = await axios.get(GET_MEMOS);
+      if (setMemos) setMemos(data);
+    }
   };
 
   const handleOnBlur = async (e: any) => {

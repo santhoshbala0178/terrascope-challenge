@@ -15,8 +15,10 @@ const DeleteMemo = ({ id }: DeleteMemoType) => {
       id,
     });
 
-    const { data } = await axios.get(GET_MEMOS);
-    if (setMemos) setMemos(data);
+    if (response.status === 200) {
+      const { data } = await axios.get(GET_MEMOS);
+      if (setMemos) setMemos(data);
+    }
   };
 
   return (

@@ -10,8 +10,10 @@ const AddMemo = () => {
   const addNewMemo = async () => {
     const response = await axios.get(ADD_MEMO);
 
-    const { data } = await axios.get(GET_MEMOS);
-    if (setMemos) setMemos(data);
+    if (response.status === 200) {
+      const { data } = await axios.get(GET_MEMOS);
+      if (setMemos) setMemos(data);
+    }
   };
   return <AddMemoButton onClick={addNewMemo}>{'Add Memo'}</AddMemoButton>;
 };
